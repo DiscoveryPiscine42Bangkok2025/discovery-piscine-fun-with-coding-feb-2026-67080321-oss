@@ -1,0 +1,58 @@
+/* Ensure the page fills the screen */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #777;
+}
+
+/* Common Parallax Styling */
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Set a specific height for the sections */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Set specific images (Replace URLs with your image paths) */
+.img1 {
+    background-image: url('https://i.pinimg.com/736x/0e/d8/07/0ed80771cb9353e6d38d92f6335c82e4.jpg');
+}
+
+.img2 {
+    background-image: url('https://i.pinimg.com/736x/1a/53/43/1a534339a2adedc22b832ba0ebe86b81.jpg');
+}
+
+/* Center Message Styling */
+.caption {
+    text-align: center;
+}
+
+.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* The Black Block Section */
+.content-block {
+    color: #ddd;
+    background-color: #282e34; /* Dark/Black block */
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.content-block h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
