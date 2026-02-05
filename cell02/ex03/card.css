@@ -1,0 +1,95 @@
+/* General page styling to center the card */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* The main container for the card */
+.card-container {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Makes it pop out */
+    text-align: center;
+}
+
+/* Styling the Title */
+.card-title {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- THE INVISIBLE TABLE LOGIC --- */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between borders */
+    border: none; /* Invisible */
+}
+
+.profile-table td {
+    border: none; /* Invisible cells */
+    text-align: center; /* Centers everything inside the table */
+    padding: 8px 0; /* Adds breathing room between rows */
+}
+
+/* Profile Picture styling */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover;
+    border: 3px solid #00babc;
+}
+
+/* Login styling */
+.login-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Description styling */
+.description {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Social icons styling */
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Contact Button styling */
+.contact-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #00babc; /* 42 Cyan color */
+}
