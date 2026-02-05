@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Balloon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <div id="balloon"></div>
+
+    <script>
+        $(document).ready(function() {
+            const $balloon = $('#balloon');
+            const colors = ['red', 'green', 'blue'];
+            let colorIndex = 0;
+
+            function updateBalloon(size, colorIdx) {
+                // Keep color index within bounds (0, 1, 2)
+                if (colorIdx < 0) colorIdx = 2;
+                colorIndex = colorIdx % 3;
+
+                $balloon.css({
+                    'width': size + 'px',
+                    'height': size + 'px',
+                    'background-color': colors[colorIndex]
+                });
+            }
+
+            // Click Event: Grow and Cycle Colors Forward
+            $balloon.on('click', function() {
+                let currentSize = $balloon.width() + 10;
+                
+                if (currentSize > 420) {
+                    currentSize = 200;
+                    colorIndex = 0;
+                } else {
+                    colorIndex++;
+                }
+                
+                updateBalloon(currentSize, colorIndex);
+            });
+
+            // Mouse Leave Event: Shrink and Cycle Colors Backward
+            $balloon.on('mouseleave', function() {
+                let currentSize = $balloon.width() - 5;
+                
+                if (currentSize < 200) {
+                    currentSize = 200;
+                } else {
+                    colorIndex--;
+                }
+
+                updateBalloon(currentSize, colorIndex);
+            });
+        });
+    </script>
+</body>
+</html>
